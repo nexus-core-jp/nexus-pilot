@@ -1,0 +1,2 @@
+Generate three different suggestions that address the user's query.
+Each suggestion should be distinct and plausible.
