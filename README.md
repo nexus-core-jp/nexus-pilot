@@ -43,8 +43,3 @@ temperature: float (optional)
 
 ---
 
-✅ これを `README.md` に**貼り付けて上書き保存**すれば完了です！
-
-保存できたら教えてください。いよいよ次の：
-
-📮 ChatbotArena出場申請の「英語テンプレート」を出します！
