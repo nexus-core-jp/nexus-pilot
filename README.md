@@ -43,3 +43,42 @@ temperature: float (optional)
 
 ---
 
+## Setup
+
+1. Ensure you have **Python 3.9+** installed.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set required environment variables:
+   - `OPENAI_API_KEY` - token for the model backend
+
+## Running the API
+
+Start the service with Uvicorn:
+```bash
+uvicorn api:app --host 0.0.0.0 --port 8000
+```
+The endpoint will be available at `http://localhost:8000/v1/chat/completions`.
+
+## Usage Example
+
+Call the API with **curl**:
+```bash
+curl -X POST http://localhost:8000/v1/chat/completions \
+     -H "Content-Type: application/json" \
+     -d '{"model": "nexus-pilot", "messages": [{"role": "user", "content": "Hello"}]}'
+```
+
+Or from Python:
+```python
+import requests
+
+payload = {
+    "model": "nexus-pilot",
+    "messages": [{"role": "user", "content": "Hello"}]
+}
+resp = requests.post("http://localhost:8000/v1/chat/completions", json=payload)
+print(resp.json())
+```
+
